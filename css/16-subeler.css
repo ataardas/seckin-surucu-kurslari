@@ -1,0 +1,51 @@
+/* Bu dosya şubelerimiz bölümünü (harita gömme + şube kartları) kontrol eder. */
+  /* map embeds */
+  .bmapreal{height:190px;border:0;width:100%;display:block;filter:grayscale(.25) contrast(1.02)}
+  .bdir{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--plate);margin-top:2px}
+  .bdir:hover{text-decoration:underline}
+  .bdir svg{width:14px;height:14px}
+
+  /* branches */
+  .branch-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .branch{background:var(--lane);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+  .branch .bmap{height:150px;background:var(--asphalt);position:relative;overflow:hidden}
+  .branch .bmap::before{content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(90deg, transparent 48%, var(--signal) 48% 52%, transparent 52%),
+      repeating-linear-gradient(115deg, var(--asphalt-2) 0 26px, var(--asphalt-3) 26px 27px);
+    opacity:.9}
+  .branch .bmap .pin{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);z-index:2}
+  .branch .bmap .pin svg{width:38px;height:38px;color:var(--signal);filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+  .branch .binner{padding:26px 26px 28px;display:flex;flex-direction:column;gap:14px;flex:1}
+  .branch .bhead{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+  .branch h3{font-size:30px}
+  .branch .badge{font-family:'Space Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:100px;white-space:nowrap}
+  .branch .badge.main{background:var(--ink);color:var(--lane)}
+  .branch .badge.fresh{background:#DFF6E8;color:#0E7A42;border:1px solid #9BE0BD}
+  .branch .bmeta{font-family:'Space Mono';font-size:12px;color:var(--muted);letter-spacing:.03em;display:flex;gap:8px;flex-wrap:wrap}
+  .branch .bclasses{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+  .branch .bclasses span{font-family:'Oswald';font-weight:600;font-size:13px;letter-spacing:.03em;background:var(--concrete);border:1px solid var(--line);border-radius:7px;padding:5px 10px}
+  .branch .bfoot{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+  .branch .baddr{font-size:13.5px;color:var(--muted);display:flex;gap:9px;align-items:flex-start;line-height:1.5}
+  .branch .baddr svg{width:15px;height:15px;flex-shrink:0;margin-top:3px}
+  .bphones{display:flex;flex-direction:column;gap:6px}
+  .bphones a{font-family:'Oswald';font-weight:600;font-size:17px;letter-spacing:.03em;color:var(--ink);display:inline-flex;align-items:center;gap:9px;transition:color .18s}
+  .bphones a:hover{color:var(--signal-2)}
+  .bphones a svg{width:15px;height:15px;color:var(--signal-2);flex-shrink:0}
+  .bphones a.sec{font-size:14.5px;font-weight:500;color:var(--muted)}
+  .bphones a.sec:hover{color:var(--ink)}
+  .prow{display:flex;align-items:center;gap:10px}
+  .wa-mini{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#25D366;color:#fff;flex-shrink:0;transition:transform .16s}
+  .wa-mini:hover{transform:scale(1.12)}
+  .wa-mini svg{width:15px;height:15px}
+  .blinks{display:flex;gap:9px;flex-wrap:wrap;margin-top:2px}
+  .blinks a{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:100px;padding:7px 13px;color:var(--ink);transition:.18s}
+  .blinks a:hover{border-color:var(--signal);background:rgba(255,179,0,.1)}
+  .blinks a svg{width:14px;height:14px;flex-shrink:0}
+  .bmail{font-size:12.5px;color:var(--muted);word-break:break-all}
+  .bmail:hover{color:var(--ink)}
+
+  /* responsive */
+  @media(max-width:900px){
+    .branch-grid{grid-template-columns:1fr}
+  }

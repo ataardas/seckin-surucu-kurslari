@@ -1,0 +1,22 @@
+/* Bu dosya sitede tekrar eden ortak bileşenleri kontrol eder: eyebrow etiketleri, butonlar ve scroll ile görünme (.reveal) efekti. */
+
+  .eyebrow{font-family:'Space Mono',monospace;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--signal)}
+  .on-dark .eyebrow{color:var(--muted-d)}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;
+    font-size:15px;padding:15px 26px;border-radius:100px;border:2px solid transparent;
+    background:var(--signal);color:#1A1400;cursor:pointer;transition:transform .18s ease, background .18s ease;
+    line-height:1;white-space:nowrap;
+  }
+  .btn:hover{background:var(--signal-2);transform:translateY(-2px)}
+  .btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+  .btn.ghost:hover{background:rgba(255,179,0,.12);transform:translateY(-2px)}
+  .btn svg{width:18px;height:18px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}

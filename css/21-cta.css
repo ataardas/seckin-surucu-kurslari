@@ -1,0 +1,17 @@
+/* Bu dosya "Yola çıkmaya hazır mısın?" kayıt/iletişim (CTA) bölümünü kontrol eder. */
+  .cta{background:var(--signal);color:#1A1400;text-align:center}
+  .cta h2{font-size:clamp(38px,6vw,80px);max-width:14ch;margin:0 auto 22px}
+  .cta p{font-size:18px;max-width:46ch;margin:0 auto 34px;font-weight:500}
+  .cta .btn{background:var(--asphalt);color:var(--lane)}
+  .cta .btn:hover{background:#000}
+  .cta-branches{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:820px;margin:0 auto;text-align:left}
+  .ctab{background:rgba(26,20,0,.07);border:2px solid rgba(26,20,0,.16);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:8px}
+  .ctab-name{font-family:'Oswald';font-weight:700;text-transform:uppercase;font-size:22px;letter-spacing:.02em;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .ctab-name span{font-family:'Space Mono';font-size:10px;letter-spacing:.14em;background:rgba(26,20,0,.82);color:var(--signal);padding:4px 9px;border-radius:100px;text-transform:uppercase}
+  .ctab-phone{font-family:'Oswald';font-weight:700;font-size:clamp(24px,3.4vw,32px);letter-spacing:.02em;line-height:1.1;color:#1A1400}
+  .ctab-phone:hover{text-decoration:underline}
+  .ctab-alt{font-family:'Space Mono';font-size:12.5px;letter-spacing:.02em;opacity:.75;margin-bottom:8px}
+  .ctab-alt a:hover{text-decoration:underline}
+  .ctab .btn{align-self:flex-start;margin-top:auto}
+  @media(max-width:760px){.cta-branches{grid-template-columns:1fr}}
+  .cta .phone{margin-top:26px;font-family:'Oswald';font-weight:600;font-size:clamp(26px,4vw,40px);letter-spacing:.02em;display:inline-flex;align-items:center;gap:14px}

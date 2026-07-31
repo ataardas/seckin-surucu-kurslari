@@ -1,0 +1,18 @@
+/* Bu dosya CSS reset, temel body/tipografi kurallarını ve odak (focus) erişilebilirlik stilini kontrol eder. */
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Manrope',system-ui,sans-serif;
+    background:var(--concrete);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.05;text-transform:uppercase;letter-spacing:-0.01em}
+  .mono{font-family:'Space Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  section{position:relative}
+  .wrap{max-width:var(--max);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+  :focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}

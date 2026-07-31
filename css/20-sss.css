@@ -1,0 +1,21 @@
+/* Bu dosya sık sorulan sorular (FAQ/SSS) bölümünü kontrol eder. */
+  .faq{background:var(--asphalt);color:var(--lane)}
+  .faq-list{max-width:860px;border-top:1px solid var(--line-d)}
+  .fq{border-bottom:1px solid var(--line-d)}
+  .fq summary{
+    list-style:none;cursor:pointer;padding:24px 46px 24px 0;position:relative;
+    font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:clamp(17px,2.1vw,21px);
+    letter-spacing:.01em;color:var(--lane);line-height:1.3;transition:color .18s;
+  }
+  .fq summary::-webkit-details-marker{display:none}
+  .fq summary:hover{color:var(--signal)}
+  .fq summary::after{
+    content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;
+    border-right:2.5px solid var(--signal);border-bottom:2.5px solid var(--signal);
+    transform:translateY(-70%) rotate(45deg);transition:transform .25s ease;
+  }
+  .fq[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+  .fq[open] summary{color:var(--signal)}
+  .fqin{padding:0 40px 26px 0}
+  .fqin p{color:var(--muted-d);font-size:15.5px;line-height:1.7;max-width:66ch}
+  .fqin strong{color:var(--lane)}

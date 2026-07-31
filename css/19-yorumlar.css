@@ -1,0 +1,13 @@
+/* Bu dosya öğrenci yorumları (testimonials) bölümünü kontrol eder. */
+  .rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
+  .rev{background:var(--lane);border:1px solid var(--line);border-radius:18px;padding:28px 26px;margin:0;display:flex;flex-direction:column;gap:14px}
+  .rev .stars{color:var(--signal-2);font-size:17px;letter-spacing:.14em}
+  .rev p{font-size:15.5px;line-height:1.65;color:var(--ink);flex:1}
+  .rev cite{font-style:normal;font-family:'Oswald';font-weight:600;text-transform:uppercase;font-size:16px;letter-spacing:.02em;display:flex;flex-direction:column;gap:3px;padding-top:14px;border-top:1px solid var(--line)}
+  .rev cite span{font-family:'Space Mono';font-size:11px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;font-weight:400}
+  .rev-cta{margin-top:30px;display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
+  .rev-cta>span{font-size:15px;color:var(--muted)}
+  .rev-links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .rev-links a{display:inline-flex;align-items:center;gap:9px;font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:14px;color:var(--ink);background:var(--lane);border:2px solid var(--line);border-radius:100px;padding:12px 22px;transition:.18s}
+  .rev-links a:hover{border-color:var(--signal);background:rgba(255,179,0,.1);transform:translateY(-2px)}
+  .rev-links a svg{width:16px;height:16px;color:var(--signal-2)}

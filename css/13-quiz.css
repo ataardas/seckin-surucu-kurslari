@@ -1,0 +1,22 @@
+/* Bu dosya "Hangi ehliyet sana uygun?" quiz bölümünü kontrol eder. */
+  .quiz{background:var(--concrete-2)}
+  .quiz-box{background:var(--lane);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,4vw,46px);max-width:820px;position:relative;overflow:hidden;min-height:330px}
+  .quiz-progress{position:absolute;top:0;left:0;right:0;height:4px;background:var(--line)}
+  .quiz-progress span{display:block;height:100%;width:0;background:var(--signal);transition:width .4s cubic-bezier(.2,.8,.2,1)}
+  .qstep,.qresult{display:none}
+  .qstep.active,.qresult.active{display:block;animation:qfade .35s ease}
+  @keyframes qfade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .qnum{font-family:'Space Mono';font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .quiz-box h3{font-size:clamp(24px,3.4vw,36px);margin:12px 0 26px}
+  .qopts{display:flex;flex-wrap:wrap;gap:12px}
+  .qopt{
+    font-family:'Oswald';font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:16px;
+    background:var(--concrete);border:2px solid var(--line);color:var(--ink);
+    padding:16px 26px;border-radius:12px;cursor:pointer;transition:.18s;
+  }
+  .qopt:hover{border-color:var(--signal);background:rgba(255,179,0,.12);transform:translateY(-2px)}
+  .qbadge{font-family:'Oswald';font-weight:700;font-size:clamp(48px,8vw,76px);line-height:1;color:var(--ink);background:var(--signal);display:inline-block;padding:12px 24px;border-radius:14px;margin:14px 0 6px}
+  .qresult p{font-size:16.5px;color:var(--muted);line-height:1.65;max-width:52ch;margin-bottom:18px}
+  .qnote{background:var(--concrete);border-left:4px solid var(--signal);border-radius:0 10px 10px 0;padding:14px 18px;font-size:14px;color:var(--ink);margin-bottom:24px;line-height:1.55}
+  .qactions{display:flex;gap:12px;flex-wrap:wrap}
+  .quiz-legal{font-size:12.5px;color:var(--muted);margin-top:16px;max-width:60ch}

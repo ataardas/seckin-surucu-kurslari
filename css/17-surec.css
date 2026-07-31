@@ -1,0 +1,8 @@
+/* Bu dosya "Nasıl kayıt olurum" adım adım süreç bölümünü kontrol eder. */
+  .process{background:var(--asphalt);color:var(--lane)}
+  .steps{position:relative;margin-top:20px}
+  .steps::before{content:"";position:absolute;left:27px;top:20px;bottom:20px;width:2px;background:repeating-linear-gradient(var(--signal) 0 12px, transparent 12px 22px)}
+  .step{display:grid;grid-template-columns:56px 1fr;gap:24px;padding:22px 0;align-items:start}
+  .step .sno{width:56px;height:56px;border-radius:50%;background:var(--asphalt-2);border:2px solid var(--signal);color:var(--signal);font-family:'Oswald';font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;position:relative;z-index:2}
+  .step h3{font-size:23px;color:var(--lane);margin-bottom:6px}
+  .step p{color:var(--muted-d);font-size:15.5px;max-width:58ch}

@@ -1,0 +1,20 @@
+/* Bu dosya sitenin genel renk, boşluk ve tipografi değişkenlerini (CSS custom properties) kontrol eder. */
+:root{
+    --concrete:#E9E9E3;
+    --concrete-2:#DDDDD5;
+    --asphalt:#17161B;
+    --asphalt-2:#211F26;
+    --asphalt-3:#2C2A32;
+    --ink:#1A1820;
+    --signal:#FFB300;
+    --signal-2:#FF9800;
+    --plate:#12377E;
+    --lane:#F6F6F2;
+    --muted:#6C6A63;
+    --muted-d:#9C988E;
+    --line:#C9C9C0;
+    --line-d:#3A3843;
+    --r:14px;
+    --pad: clamp(20px, 5vw, 80px);
+    --max: 1240px;
+  }

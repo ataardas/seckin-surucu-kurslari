@@ -1,0 +1,31 @@
+/* Bu dosya "Sayılar konuşuyor" istatistik bölümünü (şerit animasyonu + sayaçlar) kontrol eder. */
+  .stats{background:var(--asphalt);color:var(--lane);position:relative;overflow:hidden}
+  .stats>.wrap{position:relative;z-index:2}
+  .stats-tex{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .stats-tex::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 78% 120%, rgba(255,179,0,.18), transparent 62%)}
+  .lane{position:absolute;left:-15%;width:130%;height:4px;
+    background-image:linear-gradient(90deg,var(--signal) 0 30px,transparent 30px 64px);
+    background-size:64px 100%;background-repeat:repeat-x;}
+  .lane.l1{top:30%;opacity:.42;animation:laneDrift 5.5s linear infinite}
+  .lane.l2{top:48%;opacity:.30;height:3px;animation:laneDrift 8s linear infinite}
+  .lane.l3{top:66%;opacity:.22;height:3px;animation:laneDrift 11s linear infinite}
+  .lane.l4{top:83%;opacity:.16;height:2px;animation:laneDrift 15s linear infinite}
+  @keyframes laneDrift{from{background-position:0 0}to{background-position:64px 0}}
+  @media (prefers-reduced-motion:reduce){.lane{animation:none}}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .stat{padding:clamp(40px,5vw,64px) 26px;border-right:1px solid var(--line-d);text-align:left}
+  .stat:last-child{border-right:0}
+  .stat .snum{font-family:'Oswald';font-weight:700;font-size:clamp(42px,6vw,66px);line-height:.9;color:var(--signal)}
+  .stat .snum small{font-size:.42em;color:var(--lane);vertical-align:super;margin-left:2px}
+  .stat .slabel{font-size:14px;color:var(--muted-d);margin-top:12px;letter-spacing:.02em}
+
+  /* responsive */
+  @media(max-width:900px){
+    .stats-grid{grid-template-columns:1fr 1fr}
+    .stat{border-right:0;border-bottom:1px solid var(--line-d)}
+    .stat:nth-child(odd){border-right:1px solid var(--line-d)}
+  }
+  @media(max-width:400px){
+    .stats-grid{grid-template-columns:1fr}
+    .stat,.stat:nth-child(odd){border-right:0;border-bottom:1px solid var(--line-d)}
+  }

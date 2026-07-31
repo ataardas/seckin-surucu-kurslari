@@ -1,0 +1,20 @@
+/* Bu dosya ehliyet sınıfları kartlarını (grid + fotoğraflı rozet kartları) kontrol eder. */
+  /* license class cards — Format 2 (photo bg + overlay) */
+  .classes-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+  .csign{
+    position:relative;border-radius:var(--r);overflow:hidden;min-height:250px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    background:var(--asphalt);border:1px solid var(--line-d);
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s;
+  }
+  .csign:hover{transform:translateY(-4px);box-shadow:0 18px 36px -20px rgba(0,0,0,.55);border-color:var(--signal)}
+  .csign .cphoto{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .csign .cphoto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .csign:hover .cphoto img{transform:scale(1.05)}
+  .csign .cwm{width:70px;height:70px;color:rgba(255,255,255,.16);margin-bottom:38px}
+  .csign .cscrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(23,22,27,.05) 0%, rgba(23,22,27,.45) 52%, rgba(23,22,27,.94) 100%)}
+  .csign .cbody{position:relative;z-index:2;padding:18px 18px 20px}
+  .csign .ccode{font-family:'Oswald';font-weight:700;font-size:36px;letter-spacing:.02em;line-height:.9;color:var(--lane);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .csign .cauto{font-family:'Space Mono';font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--asphalt);background:var(--signal);padding:4px 8px;border-radius:5px;line-height:1}
+  .csign .cbranch{font-family:'Space Mono';font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--plate);padding:4px 8px;border-radius:5px;line-height:1}
+  .csign .cdesc{font-size:13px;color:#CFCBC2;line-height:1.5;margin-top:9px}

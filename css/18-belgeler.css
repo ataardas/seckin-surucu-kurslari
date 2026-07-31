@@ -1,0 +1,8 @@
+/* Bu dosya kayıt için gereken belgeler bölümünü kontrol eder. */
+  .docs{background:var(--concrete-2)}
+  .doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+  .doc{background:var(--lane);border:1px solid var(--line);border-radius:14px;padding:24px 22px;display:flex;gap:16px;align-items:flex-start;transition:.2s}
+  .doc:hover{border-color:var(--signal);transform:translateY(-3px)}
+  .doc .dno{font-family:'Space Mono';font-size:12px;font-weight:700;color:var(--signal-2);background:var(--concrete);border-radius:7px;padding:6px 9px;flex-shrink:0;letter-spacing:.04em}
+  .doc h3{font-size:19px;margin-bottom:6px}
+  .doc p{font-size:14px;color:var(--muted);line-height:1.55}

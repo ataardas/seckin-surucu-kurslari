@@ -1,0 +1,22 @@
+/* Bu dosya özel direksiyon dersleri bölümünü kontrol eder. */
+  /* private lessons feature */
+  .private{background:var(--concrete-2)}
+  .priv-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+  .priv-card{background:var(--asphalt);color:var(--lane);border-radius:22px;padding:clamp(30px,4vw,48px);position:relative;overflow:hidden}
+  .priv-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,var(--signal) 0 30px, transparent 30px 52px)}
+  .priv-card .tag{font-family:'Space Mono';font-size:11px;letter-spacing:.2em;color:var(--signal);text-transform:uppercase}
+  .priv-card h3{font-size:clamp(30px,4vw,46px);margin:14px 0 18px;color:var(--lane)}
+  .priv-card p{color:var(--muted-d);font-size:16px;line-height:1.65;margin-bottom:22px}
+  .priv-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+  .priv-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--lane)}
+  .priv-list li svg{width:20px;height:20px;color:var(--signal);flex-shrink:0;margin-top:2px}
+  .priv-copy h2{font-size:clamp(32px,5vw,58px);margin:16px 0 20px}
+  .priv-copy p{color:var(--muted);font-size:17px;line-height:1.65;max-width:48ch}
+  .priv-who{display:flex;flex-direction:column;gap:12px;margin-top:26px}
+  .priv-who .row{display:flex;gap:14px;align-items:center;background:var(--lane);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:14.5px;font-weight:600}
+  .priv-who .row b{font-family:'Space Mono';color:var(--plate);font-size:13px}
+
+  /* responsive */
+  @media(max-width:900px){
+    .priv-grid{grid-template-columns:1fr}
+  }
