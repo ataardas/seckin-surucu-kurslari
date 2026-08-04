@@ -13,8 +13,7 @@
   .priv-copy h2{font-size:clamp(32px,5vw,58px);margin:16px 0 20px}
   .priv-copy p{color:var(--muted);font-size:17px;line-height:1.65;max-width:48ch}
   .priv-who{display:flex;flex-direction:column;gap:12px;margin-top:26px}
-  .priv-who .row{display:flex;gap:14px;align-items:center;background:var(--lane);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:14.5px;font-weight:600}
-  .priv-who .row b{font-family:'Space Mono';color:var(--plate);font-size:13px}
+  .priv-who .row{display:flex;gap:14px;align-items:center;background:var(--lane);border:1px solid var(--line);border-left:4px solid var(--signal);border-radius:12px;padding:14px 18px;font-size:14.5px;font-weight:600}
 
   /* responsive */
   @media(max-width:900px){
