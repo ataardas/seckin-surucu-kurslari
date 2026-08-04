@@ -24,27 +24,27 @@ Sayfayı yukarıdan aşağı taradığında göreceğin sıra:
 |---|---|---|---|---|
 | 1 | NAV BÖLÜMÜ | En üstte sabit duran logo + menü + "Hemen Kayıt Ol" butonu | `css/02-yerlesim.css` | `js/menu.js` |
 | 2 | HERO BÖLÜMÜ | Video arka planlı büyük giriş, "Direksiyona güvenle geç." başlığı, sağda yüzde göstergesi | `css/10-hero.css` | `js/gauge.js` |
-| 3 | MARQUEE BÖLÜMÜ | Sarı şerit üzerinde kayan "A1 Motosiklet, A2, A, B Otomobil..." yazıları | `css/11-marquee.css` | yok |
-| 4 | EHLİYET SINIFLARI BÖLÜMÜ | A1'den CE'ye kadar fotoğraflı sınıf kartları | `css/12-siniflar.css` | yok |
-| 5 | QUIZ BÖLÜMÜ | "Hangi ehliyet sana uygun?" testi (3 soru + sonuç) | `css/13-quiz.css` | `js/quiz.js` |
-| 6 | İSTATİSTİKLER BÖLÜMÜ | Koyu zemin üzerinde sayan rakamlar ("30", "4000+"...) | `css/14-istatistikler.css` | `js/istatistikler.js` |
-| 7 | ÖZEL DERSLER BÖLÜMÜ | "Ehliyetin var ama direksiyona korkuyor musun?" bölümü | `css/15-ozel-dersler.css` | yok |
-| 8 | ŞUBELER BÖLÜMÜ | Korkuteli ve Konyaaltı kartları — harita, adres, telefonlar | `css/16-subeler.css` | yok |
-| 9 | SÜREÇ BÖLÜMÜ | "Dört adımda direksiyon başında" — 1,2,3,4 adımları | `css/17-surec.css` | yok |
-| 10 | BELGELER BÖLÜMÜ | Kayıt için gereken 6 belge kartı | `css/18-belgeler.css` | yok |
-| 11 | YORUMLAR BÖLÜMÜ | Öğrenci yorumları (3 alıntı) | `css/19-yorumlar.css` | yok |
-| 12 | SSS BÖLÜMÜ | Tıklayınca açılan/kapanan soru-cevap kutuları | `css/20-sss.css` | yok |
-| 13 | CTA BÖLÜMÜ | Sarı zeminli "Yola çıkmaya hazır mısın?" + iki şubenin telefon kartları | `css/21-cta.css` | yok |
-| 14 | FOOTER BÖLÜMÜ | En alt, koyu zemin — iki şubenin özet iletişim bilgileri | `css/02-yerlesim.css` | yok |
-| 15 | MOBİL SABİT ÇUBUK | Sadece telefon ekranında altta sabit duran "Ara / WhatsApp" çubuğu | `css/02-yerlesim.css` | `js/menu.js` (açılış/kapanışla ilgisi yok, ayrı bir davranışı yok — sadece linkler) |
+| 3 | İSTATİSTİK ŞERİDİ | Hero'nun hemen altında ince bir çizgide "30 araç · %95,64 başarı · 2 şube · 4000+ mezun" | `css/14-istatistikler.css` | yok |
+| 4 | MARQUEE BÖLÜMÜ | Sarı şerit üzerinde kayan araç modelleri (şu an TODO yer tutucu) | `css/11-marquee.css` | yok |
+| 5 | EHLİYET SINIFLARI BÖLÜMÜ | A1'den CE'ye kadar sınıf kartları. Kartların hemen altında **"Hangisi sana uygun bilmiyor musun?"** yazısına tıklayınca açılan quiz (3 soru + sonuç) | `css/12-siniflar.css` + `css/13-quiz.css` | `js/quiz.js` |
+| 6 | ÖZEL DERSLER BÖLÜMÜ | "Ehliyetin var ama direksiyona korkuyor musun?" bölümü | `css/15-ozel-dersler.css` | yok |
+| 7 | ŞUBELER BÖLÜMÜ | Korkuteli ve Konyaaltı kartları — harita, adres, telefonlar | `css/16-subeler.css` | yok |
+| 8 | SÜREÇ + BELGELER BÖLÜMÜ | "Dört adımda direksiyon başındasın" — 1,2,3,4 adımları. 2. adımın ("Kaydını Tamamla") içinde **"Gerekli belgeler (6)"** yazısına tıklayınca açılan belge listesi | `css/17-surec.css` | yok |
+| 9 | YORUMLAR BÖLÜMÜ | Öğrenci yorumları (3 alıntı) | `css/19-yorumlar.css` | yok |
+| 10 | SSS BÖLÜMÜ | Tıklayınca açılan/kapanan soru-cevap kutuları | `css/20-sss.css` | yok |
+| 11 | CTA BÖLÜMÜ | Sarı zeminli "Yola çıkmaya hazır mısın?" + iki şubenin telefon kartları | `css/21-cta.css` | yok |
+| 12 | FOOTER BÖLÜMÜ | En alt, koyu zemin — iki şubenin özet iletişim bilgileri | `css/02-yerlesim.css` | yok |
+| 13 | MOBİL SABİT ÇUBUK | Sadece telefon ekranında altta sabit duran "Ara / WhatsApp" çubuğu | `css/02-yerlesim.css` | yok (sadece linkler) |
 
-"Script: yok" yazan bölümlerde tıklama/animasyon gibi bir davranış yoktur — sadece durağan metin ve görseldir, JS dosyasına ihtiyaç duymaz.
+"Script: yok" yazan bölümlerde tıklama/animasyon gibi bir davranış yoktur — sadece durağan metin ve görseldir, JS dosyasına ihtiyaç duymaz. (SSS, quiz-tetikleyici ve belge listesindeki aç/kapa davranışı JS gerektirmez — tarayıcının kendi `<details>` özelliğiyle çalışır, bkz. `SOZLUK.md`.)
+
+**Eskiden ayrı bölüm olan İstatistikler (sayaç animasyonlu) ve Belgeler artık yok** — içerikleri yukarıdaki gibi başka bölümlere taşındı. Bölüm başlıklarının önündeki "01 —" gibi numaralar da tüm bölümlerden kaldırıldı.
 
 ---
 
 ## css/ klasörü
 
-Her CSS dosyası bir veya birkaç bölümün **görünümünü** (renk, boşluk, yazı tipi boyutu, mobilde nasıl daraldığı) kontrol eder. Dosya isimlerindeki sayılar (`00`, `01`, `10`, `11`...) sadece yükleme sırasını gösterir, silme/ekleme yapmadıkça bu sırayla oynama.
+Her CSS dosyası bir veya birkaç bölümün **görünümünü** (renk, boşluk, yazı tipi boyutu, mobilde nasıl daraldığı) kontrol eder. Dosya isimlerindeki sayılar (`00`, `01`, `10`, `11`...) kabaca sayfadaki sırayı gösterir ama artık birebir değil — gerçek yükleme sırasını `index.html`'in `<head>`'indeki `<link>` satırlarının sırası belirler; silme/ekleme yapmadıkça dosya sırasıyla oynama.
 
 ### css/00-degiskenler.css
 **Bu dosya ne için?** Sitenin her yerinde kullanılan renkleri, boşlukları ve genişlik sınırlarını tek bir yerden tanımlar. Bir rengi burada değiştirirsen, o rengi kullanan **her yer** aynı anda değişir.
@@ -68,7 +68,7 @@ Sitenin hangi bölümünü kontrol eder: NAV BÖLÜMÜ, FOOTER BÖLÜMÜ, MOBİL
 Şunu değiştirmek istersen buraya bak: Üst menünün yüksekliğini, footer'ın arka plan rengini veya mobildeki menünün açılma şeklini değiştirmek istiyorsan.
 
 ### css/03-bilesenler.css
-**Bu dosya ne için?** Sitede tekrar tekrar kullanılan küçük parçaları kontrol eder: "eyebrow" etiketleri (başlıkların üstündeki küçük yazılar, örn. "01 — Ehliyet Sınıfları"), tüm butonlar ve sayfa kaydırıldıkça beliren "reveal" efekti.
+**Bu dosya ne için?** Sitede tekrar tekrar kullanılan küçük parçaları kontrol eder: "eyebrow" etiketleri (başlıkların üstündeki küçük yazılar, örn. "Ehliyet Sınıfları"), tüm butonlar ve sayfa kaydırıldıkça beliren "reveal" efekti.
 
 Sitenin hangi bölümünü kontrol eder: Tek bir bölüm değil — her bölümdeki butonlar ve küçük üst etiketler.
 
@@ -81,6 +81,13 @@ Sitenin hangi bölümünü kontrol eder: HERO BÖLÜMÜ.
 
 Şunu değiştirmek istersen buraya bak: Hero'nun yüksekliğini, video/görsel boyutunu, başlık yazı boyutunu değiştirmek istiyorsan.
 
+### css/14-istatistikler.css
+**Bu dosya ne için?** Hero'nun hemen altındaki ince istatistik şeridini ("30 araç · %95,64 başarı · 2 şube · 4000+ mezun") kontrol eder. Sayfa sırasında hero'dan hemen sonra geldiği için dosya `<link>`'i `index.html`'de erken yükleniyor, ama dosya adı hâlâ `14` (bkz. yukarıdaki not).
+
+Sitenin hangi bölümünü kontrol eder: İSTATİSTİK ŞERİDİ.
+
+Şunu değiştirmek istersen buraya bak: Şeridin arka plan rengini, yazı boyutunu veya öğeler arası boşluğu değiştirmek istiyorsan. (Rakamların kendisi düz metin olarak `index.html`'de — animasyon yok, JS'e gerek yok.)
+
 ### css/11-marquee.css
 **Bu dosya ne için?** Sarı zeminde kayan yazı şeridinin (marquee) hızını ve görünümünü kontrol eder.
 
@@ -91,23 +98,16 @@ Sitenin hangi bölümünü kontrol eder: MARQUEE BÖLÜMÜ.
 ### css/12-siniflar.css
 **Bu dosya ne için?** Ehliyet sınıfı kartlarının (A1, A2, B, C, CE...) görünümünü — kart boyutu, üzerine gelince büyüme efekti, alt gölgeleme — kontrol eder.
 
-Sitenin hangi bölümünü kontrol eder: EHLİYET SINIFLARI BÖLÜMÜ.
+Sitenin hangi bölümünü kontrol eder: EHLİYET SINIFLARI BÖLÜMÜ (kartlar kısmı).
 
 Şunu değiştirmek istersen buraya bak: Kartların boyutunu, aralarındaki boşluğu veya kart üstü rozet (Otomatik, Korkuteli gibi) renklerini değiştirmek istiyorsan.
 
 ### css/13-quiz.css
-**Bu dosya ne için?** "Hangi ehliyet sana uygun?" testinin kutusunu, soru/seçenek butonlarını ve ilerleme çubuğunu kontrol eder.
+**Bu dosya ne için?** "Hangi ehliyet sana uygun?" testinin kutusunu, soru/seçenek butonlarını, ilerleme çubuğunu VE Ehliyet Sınıfları kartlarının altındaki "Hangisi sana uygun bilmiyor musun?" tıklanabilir açma/kapama satırını kontrol eder.
 
-Sitenin hangi bölümünü kontrol eder: QUIZ BÖLÜMÜ.
+Sitenin hangi bölümünü kontrol eder: EHLİYET SINIFLARI BÖLÜMÜ (quiz kısmı — artık ayrı bir bölüm değil, kartların altına gömülü).
 
-Şunu değiştirmek istersen buraya bak: Quiz kutusunun rengini, seçenek butonlarının görünümünü değiştirmek istiyorsan. (Soruların kendisini değiştirmek için `index.html` ve `js/quiz.js`'e bakman gerekir — bkz. `NASIL-DEGISTIRIRIM.md`.)
-
-### css/14-istatistikler.css
-**Bu dosya ne için?** "Sayılar konuşuyor" bölümündeki koyu zemini, arka plandaki hareketli çizgi animasyonunu ve sayaçların düzenini kontrol eder.
-
-Sitenin hangi bölümünü kontrol eder: İSTATİSTİKLER BÖLÜMÜ.
-
-Şunu değiştirmek istersen buraya bak: Sayaçların yan yana mı alt alta mı dizileceğini (mobilde) veya rakamların rengini değiştirmek istiyorsan.
+Şunu değiştirmek istersen buraya bak: Quiz kutusunun rengini, tetikleyici satırın yazısını/okunu, seçenek butonlarının görünümünü değiştirmek istiyorsan. (Soruların kendisini değiştirmek için `index.html` ve `js/quiz.js`'e bakman gerekir — bkz. `NASIL-DEGISTIRIRIM.md`.)
 
 ### css/15-ozel-dersler.css
 **Bu dosya ne için?** "Ehliyetin var ama direksiyona korkuyor musun?" bölümünün iki sütunlu düzenini (solda metin, sağda koyu kart) kontrol eder.
@@ -124,18 +124,11 @@ Sitenin hangi bölümünü kontrol eder: ŞUBELER BÖLÜMÜ.
 Şunu değiştirmek istersen buraya bak: Şube kartlarının düzenini, "Ana Şube" / "Yeni Açıldı" rozetlerinin rengini değiştirmek istiyorsan.
 
 ### css/17-surec.css
-**Bu dosya ne için?** "Dört adımda direksiyon başında" bölümündeki numaralı adım listesinin (1, 2, 3, 4 daireleri ve aralarındaki çizgi) görünümünü kontrol eder.
+**Bu dosya ne için?** "Dört adımda direksiyon başındasın" bölümündeki numaralı adım listesini (1, 2, 3, 4 daireleri ve aralarındaki çizgi) VE 2. adımın içine gömülü "Gerekli belgeler" katlanır listesini kontrol eder.
 
-Sitenin hangi bölümünü kontrol eder: SÜREÇ BÖLÜMÜ.
+Sitenin hangi bölümünü kontrol eder: SÜREÇ + BELGELER BÖLÜMÜ.
 
-Şunu değiştirmek istersen buraya bak: Adım numaralarının rengini veya aralarındaki boşluğu değiştirmek istiyorsan.
-
-### css/18-belgeler.css
-**Bu dosya ne için?** Kayıt belgeleri kartlarının (numara rozeti + başlık + açıklama) görünümünü kontrol eder.
-
-Sitenin hangi bölümünü kontrol eder: BELGELER BÖLÜMÜ.
-
-Şunu değiştirmek istersen buraya bak: Belge kartlarının boyutunu veya numara rozetinin rengini değiştirmek istiyorsan.
+Şunu değiştirmek istersen buraya bak: Adım numaralarının rengini, aralarındaki boşluğu veya belge kartlarının boyutunu/numara rozetinin rengini değiştirmek istiyorsan.
 
 ### css/19-yorumlar.css
 **Bu dosya ne için?** Öğrenci yorumu kartlarının (yıldızlar, alıntı metni, isim) görünümünü kontrol eder.
@@ -145,7 +138,7 @@ Sitenin hangi bölümünü kontrol eder: YORUMLAR BÖLÜMÜ.
 Şunu değiştirmek istersen buraya bak: Yıldızların rengini veya yorum kartlarının kenarlık stilini değiştirmek istiyorsan.
 
 ### css/20-sss.css
-**Bu dosya ne için?** Sık sorulan sorular kutularının (kapalı/açık hâli, ok işaretinin dönmesi) görünümünü kontrol eder.
+**Bu dosya ne için?** Sık sorulan sorular kutularının (kapalı/açık hâli, ok işaretinin dönmesi) görünümünü kontrol eder. Aynı "açılır kutu" görsel deseni artık SÜREÇ bölümündeki belge listesinde de kullanılıyor (o kısım `css/17-surec.css`'te tanımlı, ama temel görünüm kuralları buradan geliyor).
 
 Sitenin hangi bölümünü kontrol eder: SSS BÖLÜMÜ.
 
@@ -179,9 +172,9 @@ Sitenin hangi bölümünü kontrol eder: Neredeyse tüm bölümler — her yerde
 Şunu değiştirmek istersen buraya bak: Bu belirme efektini tamamen kapatmak istersen (nadiren dokunulur).
 
 ### js/utils.js
-**Bu dosya ne için?** Diğer JS dosyalarının ortak kullandığı iki şeyi barındırır: kullanıcının "hareketi azalt" tercihini kontrol eden `reduce` değeri, ve bir sayıyı belirli bir sürede sayarak gösteren `animate` fonksiyonu.
+**Bu dosya ne için?** Diğer JS dosyalarının ortak kullandığı yardımcıları barındırır: kullanıcının "hareketi azalt" tercihini kontrol eden `reduce` değeri, bir sayıyı belirli bir sürede sayarak gösteren `animate` fonksiyonu, ve nav'daki "Hangi Ehliyet?" linkine tıklayınca kapalı quiz kutusunu otomatik açan küçük bir mantık.
 
-Sitenin hangi bölümünü kontrol eder: Doğrudan bir bölümü değil — `gauge.js`, `quiz.js` ve `istatistikler.js` bu dosyadaki `reduce` değerine ihtiyaç duyar.
+Sitenin hangi bölümünü kontrol eder: Doğrudan bir bölümü değil — `gauge.js` ve `quiz.js` bu dosyadaki `reduce` değerine ihtiyaç duyar; EHLİYET SINIFLARI BÖLÜMÜ'ndeki quiz'in nav linkiyle açılması da bu dosyadan yönetilir.
 
 Şunu değiştirmek istersen buraya bak: Neredeyse hiçbir zaman — bu bir "arka plan" dosyasıdır, dokunman gerekmeyecek.
 
@@ -193,18 +186,11 @@ Sitenin hangi bölümünü kontrol eder: HERO BÖLÜMÜ (sağdaki yüzde göster
 Şunu değiştirmek istersen buraya bak: Gösterilen başarı yüzdesini değiştirmek istiyorsan — bkz. `NASIL-DEGISTIRIRIM.md`.
 
 ### js/quiz.js
-**Bu dosya ne için?** "Hangi ehliyet sana uygun?" testinin tüm mantığını yönetir: soruları sırayla gösterir, cevaplara göre hangi ehliyet sınıfının önerileceğine karar verir, sonucu ekrana yazar.
+**Bu dosya ne için?** "Hangi ehliyet sana uygun?" testinin tüm mantığını yönetir: soruları sırayla gösterir, cevaplara göre hangi ehliyet sınıfının önerileceğine karar verir, sonucu ekrana yazar. Quiz artık Ehliyet Sınıfları bölümünün içinde tıklanınca açılan bir kutu içinde, ama bu dosyanın mantığı hiç değişmedi.
 
-Sitenin hangi bölümünü kontrol eder: QUIZ BÖLÜMÜ.
+Sitenin hangi bölümünü kontrol eder: EHLİYET SINIFLARI BÖLÜMÜ (quiz kısmı).
 
 Şunu değiştirmek istersen buraya bak: Quiz'in sonuç metinlerini (öneri yazılarını) değiştirmek istiyorsan — bkz. `NASIL-DEGISTIRIRIM.md`.
-
-### js/istatistikler.js
-**Bu dosya ne için?** "Sayılar konuşuyor" bölümündeki rakamların (30, 4000+, 2021, 2), sayfaya gelindiğinde sıfırdan başlayıp gerçek değerine doğru sayarak artmasını sağlar.
-
-Sitenin hangi bölümünü kontrol eder: İSTATİSTİKLER BÖLÜMÜ.
-
-Şunu değiştirmek istersen buraya bak: Sayma animasyonunun süresini değiştirmek istiyorsan (rakamların kendisini değiştirmek için sadece `index.html` yeterli — bkz. `NASIL-DEGISTIRIRIM.md`).
 
 ---
 
@@ -221,4 +207,4 @@ Hero bölümünün arka planında oynayan video.
 ## _backup/ klasörü
 
 ### _backup/index.original.html
-Site bölünmeden önceki, tek parça hâlindeki orijinal dosyanın birebir kopyası. **Değiştirme, silme** — sadece her şey ters giderse başvurulacak son yedek.
+Site ilk bölünmeden önceki, tek parça hâlindeki orijinal dosyanın birebir kopyası. **Değiştirme, silme** — sadece her şey ters giderse başvurulacak son yedek.

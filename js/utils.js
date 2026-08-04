@@ -15,3 +15,13 @@
     }
     requestAnimationFrame(tick);
   }
+
+  // #test quiz'i kapalı bir <details> içinde — nav linki veya doğrudan hash ile gelindiğinde aç
+  function openTestIfHashed(){
+    if(location.hash==='#test'){
+      const el=document.getElementById('test');
+      if(el && 'open' in el) el.open=true;
+    }
+  }
+  openTestIfHashed();
+  window.addEventListener('hashchange', openTestIfHashed);

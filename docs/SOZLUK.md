@@ -24,9 +24,9 @@ Bir etiketin açılışında, etiket adının yanında `isim="değer"` şeklinde
 
 BU PROJEDEN:
 ```html
-<div class="stat reveal"><div class="snum" data-count="30">0</div><div class="slabel">Araçlık filo — iki şube toplamı, bölgenin en genişi</div></div>
+<div class="csign reveal" data-veh="moto">
 ```
-`class="stat reveal"` ve `data-count="30"` birer özniteliktir.
+`class="csign reveal"` ve `data-veh="moto"` birer özniteliktir.
 
 ### div
 Hiçbir özel anlamı olmayan, sadece bir alanı gruplamaya yarayan genel amaçlı bir kutu etiketi. Sayfada görünmez, sadece içindeki şeyleri bir arada tutar (stil vermek veya konumlandırmak için kullanılır).
@@ -61,6 +61,18 @@ BU PROJEDEN:
 <div class="qresult" id="qresult">
 ```
 Menüdeki `<a class="lk" href="#test">Hangi Ehliyet?</a>` linki, `id="test"` olan bölüme atlar.
+
+### details / summary (açılır/kapanır kutu, "accordion")
+Tarayıcının kendi başına, hiç JS kodu gerektirmeden sunduğu bir "aç/kapa" yapısı. `<summary>` içindeki yazı her zaman görünür ve tıklanabilir; `<details>` etiketinin geri kalan içeriği, kullanıcı `<summary>`'ye tıklayana kadar gizli kalır. Bu sitede SSS, quiz'in "3 soruda söyleyelim →" tetikleyicisi ve Süreç bölümündeki "Gerekli belgeler" listesi hep bu yapıyla açılıp kapanıyor.
+
+BU PROJEDEN:
+```html
+<details class="fq">
+  <summary>Ehliyet almak ne kadar sürer?</summary>
+  <div class="fqin"><p>Süreç genelde 1,5 – 2 ay arasında tamamlanır. ...</p></div>
+</details>
+```
+Kullanıcı "Ehliyet almak ne kadar sürer?" yazısına tıklayana kadar `<div class="fqin">` içindeki cevap gizlidir. `open` özniteliği eklenirse (`<details open>`), kutu sayfa yüklenirken zaten açık başlar — bu sitede `js/utils.js`, nav'daki "Hangi Ehliyet?" linkine tıklanınca quiz'in `<details>`'ına tam olarak bu `open` özniteliğini JS ile ekliyor.
 
 ### Yorum satırı (comment)
 Tarayıcının/kodun görmezden geldiği, sadece insanların okuması için yazılan not. HTML'de `<!-- ... -->` arasına yazılır.
@@ -129,9 +141,9 @@ Bu kural, "Kayıt Ol" ve "Sınıfları İncele" butonlarını yan yana, araları
 
 BU PROJEDEN:
 ```css
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.kadro-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 ```
-Bu kural, istatistik kutularını **4 eşit sütuna** böler.
+Bu kural, Kadro & Filo bölümündeki iki fotoğrafı **yan yana, 2 eşit sütuna** böler.
 
 ### @media (medya sorgusu)
 "Ekran şu genişlikten küçükse/büyükse bu kuralları uygula" diyen bir CSS bloğu — mobil uyumluluğun (responsive tasarım) temelidir.
@@ -256,9 +268,9 @@ Bir etiketin `data-isim="değer"` şeklindeki özniteliklerini JS'ten okuma yolu
 
 BU PROJEDEN:
 ```js
-const to=parseInt(el.dataset.count,10);
+ans[b.dataset.key]=b.dataset.val;
 ```
-Bu satır, `<div class="snum" data-count="30">` etiketindeki `30` değerini okuyup sayaç animasyonunda kullanır.
+Bu satır, tıklanan quiz seçeneğinin (`b`) `data-key` ve `data-val` özniteliklerini okuyup verilen cevabı kaydeder.
 
 ### Üçlü operatör (ternary operator)
 Tek satırda yazılan kısa bir "eğer-öyleyse-değilse" (if/else) yapısı: `koşul ? koşul-doğruysa : koşul-yanlışsa`.

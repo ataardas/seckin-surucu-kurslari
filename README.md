@@ -12,19 +12,19 @@ Site şu bölümlerden oluşuyor (yukarıdan aşağıya, sayfada göründükleri
 
 1. **Üst menü (nav)** — logo, menü linkleri, "Hemen Kayıt Ol" butonu
 2. **Hero** — arka planda video/fotoğraf olan büyük giriş bölümü, sağda başarı oranı göstergesi
-3. **Kayan yazı (marquee)** — ehliyet sınıflarının aktığı sarı şerit
-4. **Ehliyet Sınıfları** — A1, A2, A, B, C, CE kartları
-5. **Quiz** — "Hangi ehliyet sana uygun?" testi
-6. **İstatistikler** — "30 araç, 4000+ mezun..." gibi sayan rakamlar
-7. **Özel Dersler** — ehliyeti olup direksiyona güvenmeyenler için
-8. **Şubeler** — Korkuteli ve Konyaaltı adres/telefon/harita kartları
-9. **Süreç** — kayıt olma adımları (1, 2, 3, 4)
-10. **Belgeler** — kayıt için gereken evraklar
-11. **Yorumlar** — öğrenci yorumları
-12. **SSS** — sık sorulan sorular (açılır/kapanır kutular)
-13. **CTA (İletişim)** — "Yola çıkmaya hazır mısın?" kayıt çağrısı
-14. **Footer** — alt bilgi, iki şubenin iletişim bilgileri
-15. **Mobil sabit çubuk** — sadece telefonda görünen, altta sabit duran "Ara / WhatsApp" çubuğu
+3. **İstatistik şeridi** — hero'nun hemen altında ince bir çizgide "30 araç · %95,64 başarı · 2 şube · 4000+ mezun"
+4. **Kayan yazı (marquee)** — araç modellerinin aktığı sarı şerit (şu an TODO yer tutucu, gerçek modeller eklenecek)
+5. **Ehliyet Sınıfları** — A1, A2, A, B, C, CE kartları. Kartların hemen altında **"Hangi ehliyet sana uygun?" testi** tıklanınca açılan katlanır bir kutu (accordion) olarak duruyor — artık ayrı bir bölüm değil.
+6. **Özel Dersler** — ehliyeti olup direksiyona güvenmeyenler için
+7. **Şubeler** — Korkuteli ve Konyaaltı adres/telefon/harita kartları
+8. **Süreç** — kayıt olma adımları (1, 2, 3, 4). 2. adımın ("Kaydını Tamamla") içinde **gerekli belgeler listesi** katlanır bir kutu olarak duruyor — artık ayrı bir bölüm değil.
+9. **Yorumlar** — öğrenci yorumları
+10. **SSS** — sık sorulan sorular (açılır/kapanır kutular)
+11. **CTA (İletişim)** — "Yola çıkmaya hazır mısın?" kayıt çağrısı
+12. **Footer** — alt bilgi, iki şubenin iletişim bilgileri
+13. **Mobil sabit çubuk** — sadece telefonda görünen, altta sabit duran "Ara / WhatsApp" çubuğu
+
+Eskiden ayrı bölüm olan **İstatistikler** (sayaç animasyonlu) ve **Belgeler** artık yok — içerikleri yukarıdaki gibi başka bölümlere taşındı/sadeleşti. Bölüm başlıklarının önündeki "01 —", "02 —" gibi numaralar da kaldırıldı.
 
 Her bölümün ekranda tam olarak nereye denk geldiğini ve hangi dosyaların onu kontrol ettiğini **`docs/DOSYA-REHBERI.md`** dosyasında bulabilirsin.
 

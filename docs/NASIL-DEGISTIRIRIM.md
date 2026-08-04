@@ -61,14 +61,13 @@ Sonra:
 
 Önce:
 ```html
-<p class="baddr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 8 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8z"/><circle cx="12" cy="10" r="2.6"/></svg>Kiremitli Mah. Antalya Cad. No 2/C, Korkuteli / Antalya</p>
+<p class="baddr">...Kiremitli Mah. Antalya Cad. No 2/C, Korkuteli / Antalya</p>
 ```
-Başındaki uzun `<svg>...</svg>` kısmı sadece konum ikonudur (o küçük damla şeklindeki simge), ona dokunma — cümlenin geri kalanı olan `Kiremitli Mah. Antalya Cad. No 2/C, Korkuteli / Antalya` yazısını değiştir.
 
 ⚠️ **Ama dikkat:** Şube kartındaki **harita** (haritanın kendisi, gri kutu değil gerçek Google Haritası) ve "Yol Tarifi Al" linki, adresi ayrıca **şifreli/kodlanmış bir web adresi** (URL) içinde tutuyor:
 
 ```html
-<iframe class="bmapreal" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Korkuteli şube konumu" src="https://maps.google.com/maps?q=Kiremitli%20Mahallesi%20Antalya%20Caddesi%20No%202%20Korkuteli%20Antalya&z=15&output=embed"></iframe>
+<iframe class="bmapreal" ... src="https://maps.google.com/maps?q=Kiremitli%20Mahallesi%20Antalya%20Caddesi%20No%202%20Korkuteli%20Antalya&z=15&output=embed"></iframe>
 ```
 
 Buradaki `%20` gibi işaretler boşluk anlamına gelir — bu satırı elle düzenlemek yerine, adres gerçekten değiştiyse şunu yap:
@@ -82,21 +81,21 @@ Buradaki `%20` gibi işaretler boşluk anlamına gelir — bu satırı elle düz
 
 Sitede şu an sabit bir **fiyat** gösterilmiyor (SSS'te "Taksitle ödeme yapabilir miyim?" sorusunun cevabı fiyat vermiyor, aramaya yönlendiriyor). Fiyat eklemek istersen, bu normal bir **metin düzenleme**dir — bkz. bu dosyanın 8. maddesi.
 
-**Sayan rakamları (istatistik bölümü) değiştirmek için** → `index.html`
+**İstatistik şeridindeki rakamları değiştirmek için** → `index.html`
 
-Ctrl+F ile ara: `data-count="30"` (ya da değiştirmek istediğin başka bir sayı: `data-count="4000"`, `data-count="2021"`, `data-count="2"`)
+Hero'nun hemen altındaki ince şerit ("30 araç · %95,64 başarı · 2 şube · 4000+ mezun") artık düz metin — sayaç animasyonu yok, sayı istersen doğrudan değiştirirsin. Ctrl+F ile ara: `4000+ mezun`
 
 Önce:
 ```html
-<div class="stat reveal"><div class="snum" data-count="30">0</div><div class="slabel">Araçlık filo — iki şube toplamı, bölgenin en genişi</div></div>
+<span>30 araç</span><span class="sep">·</span><span>%95,64 başarı</span><span class="sep">·</span><span>2 şube</span><span class="sep">·</span><span>4000+ mezun</span>
 ```
 
-Sonra:
+Sonra (örnek):
 ```html
-<div class="stat reveal"><div class="snum" data-count="35">0</div><div class="slabel">Araçlık filo — iki şube toplamı, bölgenin en genişi</div></div>
+<span>35 araç</span><span class="sep">·</span><span>%95,64 başarı</span><span class="sep">·</span><span>2 şube</span><span class="sep">·</span><span>4500+ mezun</span>
 ```
 
-Sadece `data-count="..."` içindeki sayıyı değiştir, `>0<` kısmına dokunma — o, sayaç animasyonu başlamadan önce görünen başlangıç değeri, JS onu otomatik günceller.
+Her `<span>...</span>` çifti arasındaki yazıyı istediğin gibi değiştirebilirsin, `<span class="sep">·</span>` olan aradaki nokta işaretlerine dokunma (onlar ayraç).
 
 **Hero'daki "Sınav Başarısı %95,64" göstergesini değiştirmek için** → `js/gauge.js`
 
@@ -163,6 +162,8 @@ Kurallar:
 ## 4) Quiz sorusu ekleme/düzenleme
 
 **Nerede:** `index.html` (görünen yazılar) ve `js/quiz.js` (sonuç mantığı).
+
+Not: Quiz artık ayrı bir bölüm değil — Ehliyet Sınıfları kartlarının altında, "Hangisi sana uygun bilmiyor musun? 3 soruda söyleyelim →" yazısına tıklayınca açılan bir kutu içinde. Bu tetikleyici yazıyı değiştirmek istersen Ctrl+F ile `3 soruda söyleyelim` ara, `<summary>...</summary>` içindeki metni düzenle. Quiz'in kendi soru/sonuç mantığı aşağıdaki gibi aynen çalışmaya devam eder.
 
 ### Kolay: Bir sorunun veya seçeneğin yazısını değiştirmek
 
@@ -282,6 +283,39 @@ Diyelim yeni dosyanı `yeni-video.mp4` olarak `assets/video/` klasörüne attın
 
 Yol yazarken başındaki `./` veya `../` kısmına dokunma, sadece dosya adını (`a-poster.jpg` / `a-web.mp4`) değiştir — bu işaretler "bu klasörden bak" anlamına geliyor, silersen dosya bulunamaz.
 
+### Ehliyet sınıfı kartlarına (A1, A2, B...) gerçek fotoğraf eklemek
+
+7 karta (A1, A1 Otomatik, A2, A2 Otomatik, A, B, B Otomatik) zaten gerçek fotoğraf eklendi. Sadece **C** ve **CE** kartlarında hâlâ eski simge (ikon) duruyor — onlar için henüz fotoğraf verilmedi.
+
+C veya CE için fotoğraf eklemek istersen, Ctrl+F ile ara: `<div class="ccode">C<span class="cbranch">` (CE için `CE<span class="cbranch">`), birkaç satır yukarısında şunu bulursun:
+
+```html
+<div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" ...>...</svg></div>
+```
+
+`<div class="cphoto">` ile `</div>` arasındaki `<svg ...>...</svg>` simgesini silip yerine bir `<img>` koy — diğer 7 kartta kullanılan kalıp aynen:
+
+```html
+<div class="cphoto"><img src="./assets/img/sinif-c.jpg"
+     srcset="./assets/img/sinif-c.jpg 480w, ./assets/img/sinif-c@2x.jpg 960w"
+     sizes="(max-width: 900px) 100vw, 400px"
+     width="480" height="360"
+     loading="lazy" decoding="async"
+     alt="C sınıfı kamyon eğitim aracı"></div>
+```
+
+`assets/img/` klasörüne o isimde (yukarıdaki örnekte `sinif-c.jpg` ve `sinif-c@2x.jpg`) fotoğraf eklemen yeterli. `srcset`/`@2x` kısmı zorunlu değil — sadece `src="..."` ile tek boyutlu bir fotoğraf da kullanabilirsin, `srcset` satırını o zaman tamamen silebilirsin.
+
+### Kayan bant (marquee) araç modellerini eklemek
+
+Şu an kayan bantta `TODO: Araç Modeli 1` gibi yer tutucu yazılar var. Ctrl+F ile ara: `TODO: Araç Modeli`
+
+```html
+<span>TODO: Araç Modeli 1</span><span>TODO: Araç Modeli 2</span><span>TODO: Araç Modeli 3</span><span>TODO: Araç Modeli 4</span><span>TODO: Araç Modeli 5</span><span>TODO: Araç Modeli 6</span>
+```
+
+Bu satır sayfada **iki kez art arda** yazılıdır (kayma animasyonunun kesintisiz görünmesi için) — her iki tekrarı da **aynı anda, aynı şekilde** değiştir, aksi halde kayarken bir yerde "atlama" görünür. Kaç model yazacağın önemli değil, `<span>...</span>` ekleyip çıkarabilirsin, yeter ki iki blok birbirinin birebir aynısı kalsın.
+
 ---
 
 ## 7) Bir bölümü tamamen gizleme
@@ -290,21 +324,23 @@ Yol yazarken başındaki `./` veya `../` kısmına dokunma, sadece dosya adını
 
 Her bölüm `<section ...>` ile başlar `</section>` ile biter (bazıları `<div class="marquee">` / `<footer>` gibi farklı etiketlerle). Bir bölümü sitede görünmez yapmanın en güvenli yolu, açılış etiketine `style="display:none"` eklemektir.
 
-Ctrl+F ile ara: `id="belgeler"` (örnek: BELGELER bölümünü gizlemek istediğini varsayalım)
+Ctrl+F ile ara: `id="yorumlar"` (örnek: YORUMLAR bölümünü gizlemek istediğini varsayalım)
 
 Önce:
 ```html
-<section class="sec docs" id="belgeler">
+<section class="sec reviews" id="yorumlar">
 ```
 
 Sonra:
 ```html
-<section class="sec docs" id="belgeler" style="display:none">
+<section class="sec reviews" id="yorumlar" style="display:none">
 ```
 
 Bu kadar — bölüm koddan silinmedi, sadece görünmez oldu. Geri getirmek istersen ` style="display:none"` kısmını silmen yeterli.
 
-⚠️ Gizlediğin bölüme üst menüden bir link gidiyorsa (örn. Belgeler bölümünü gizlersen, üst menüde "Belgeler" diye bir link olmadığı için bu örnekte sorun yok, ama SSS ya da Şubeler gibi menüde linki olan bir bölümü gizlersen), o menü linkine tıklayınca kullanıcı görünmeyen bir yere kaydırılır. Site bozulmaz ama garip durur. Menüden de kaldırmak istersen, NAV bölümünde Ctrl+F ile ilgili linki bul (örn. `href="#sss"`) ve o `<a class="lk" href="#sss">SSS</a>` satırının tamamını sil.
+⚠️ Gizlediğin bölüme üst menüden bir link gidiyorsa (YORUMLAR örneğinde menüde link yok, sorun çıkmaz; ama SSS ya da Şubeler gibi menüde linki olan bir bölümü gizlersen), o menü linkine tıklayınca kullanıcı görünmeyen bir yere kaydırılır. Site bozulmaz ama garip durur. Menüden de kaldırmak istersen, NAV bölümünde Ctrl+F ile ilgili linki bul (örn. `href="#sss"`) ve o `<a class="lk" href="#sss">SSS</a>` satırının tamamını sil.
+
+⚠️ **Süreç bölümünün içindeki "Gerekli belgeler" listesini** ya da **Ehliyet Sınıfları'nın altındaki quiz'i** gizlemek istersen, aynı yöntem çalışmaz çünkü onlar artık ayrı bir `<section>` değil, `<details class="fq">` ya da `<details class="quiz-toggle">` içindeler — o `<details ...>` etiketine aynı şekilde `style="display:none"` ekleyebilirsin, mantık aynı.
 
 ---
 
@@ -346,7 +382,9 @@ Aşağıdakiler bozulursa **site çalışmaz hale gelir** ya da arama motorları
 
 - **`<link rel="stylesheet" href="./css/...">` satırlarının sırası (index.html, `<head>` içinde).** Bu satırlar CSS dosyalarını belli bir sırayla yükler. Sırasını değiştirirsen (örn. `21-cta.css`'i `00-degiskenler.css`'ten önce koyarsan) bazı renkler/boşluklar yanlış görünebilir çünkü sonraki dosyalar öncekilerin üzerine yazıyor.
 
-- **`<script defer src="./js/...">` satırlarının sırası (index.html, en altta).** Aynı şekilde bu sıralama önemli: `menu.js`, `reveal.js`, `utils.js`, `gauge.js`, `quiz.js`, `istatistikler.js` sırasıyla yüklenir. `utils.js`, diğer bazı dosyaların ihtiyaç duyduğu ortak bir değeri (`reduce`) tanımlıyor — sırası bozulursa quiz, gauge veya istatistik sayaçları çalışmayabilir.
+- **`<script defer src="./js/...">` satırlarının sırası (index.html, en altta).** Aynı şekilde bu sıralama önemli: `menu.js`, `reveal.js`, `utils.js`, `gauge.js`, `quiz.js` sırasıyla yüklenir. `utils.js`, diğer bazı dosyaların ihtiyaç duyduğu ortak bir değeri (`reduce`) tanımlıyor — sırası bozulursa quiz veya gauge çalışmayabilir.
+
+- **Quiz'in `id="test"` değeri (index.html) ve `js/utils.js` içindeki `#test` satırları.** Üst menüdeki "Hangi Ehliyet?" linki bu `id`'ye göre quiz kutusunu bulup otomatik açıyor. `id="test"`'i silersen ya da değiştirirsen (ve `js/utils.js`'te de aynı şekilde güncellemezsen), menü linkine tıklayınca quiz kapalı kalır.
 
 - **`data-key`, `data-val`, `id="..."`, `class="..."` gibi tırnak içindeki teknik değerler.** Bunlar gözle görünmez ama JS ve CSS bunlara bakarak çalışır. Görünen yazıyı değiştirmek her zaman güvenlidir, tırnak içindeki bu teknik isimleri değiştirmek genelde güvenli değildir (istisnası: madde 6'da anlatılan dosya adı değişikliği gibi, hem kodda hem dosya sisteminde birlikte değiştirdiğin durumlar).
 

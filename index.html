@@ -14,14 +14,13 @@
 <link rel="stylesheet" href="./css/02-yerlesim.css">
 <link rel="stylesheet" href="./css/03-bilesenler.css">
 <link rel="stylesheet" href="./css/10-hero.css">
+<link rel="stylesheet" href="./css/14-istatistikler.css">
 <link rel="stylesheet" href="./css/11-marquee.css">
 <link rel="stylesheet" href="./css/12-siniflar.css">
 <link rel="stylesheet" href="./css/13-quiz.css">
-<link rel="stylesheet" href="./css/14-istatistikler.css">
 <link rel="stylesheet" href="./css/15-ozel-dersler.css">
 <link rel="stylesheet" href="./css/16-subeler.css">
 <link rel="stylesheet" href="./css/17-surec.css">
-<link rel="stylesheet" href="./css/18-belgeler.css">
 <link rel="stylesheet" href="./css/19-yorumlar.css">
 <link rel="stylesheet" href="./css/20-sss.css">
 <link rel="stylesheet" href="./css/21-cta.css">
@@ -118,11 +117,18 @@
   </div>
 </section>
 
+<!-- ===== İSTATİSTİK ŞERİDİ | stil: css/14-istatistikler.css | script: yok ===== -->
+<div class="stat-strip reveal">
+  <div class="wrap">
+    <span>30 araç</span><span class="sep">·</span><span>%95,64 başarı</span><span class="sep">·</span><span>2 şube</span><span class="sep">·</span><span>4000+ mezun</span>
+  </div>
+</div>
+
 <!-- ===== MARQUEE BÖLÜMÜ | stil: css/11-marquee.css | script: yok ===== -->
 <div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>A1 Motosiklet</span><span>A2</span><span>A</span><span>B Otomobil</span><span>C Kamyon</span><span>CE Tır</span><span>Özel Direksiyon Dersi</span><span>Simülatör</span>
-    <span>A1 Motosiklet</span><span>A2</span><span>A</span><span>B Otomobil</span><span>C Kamyon</span><span>CE Tır</span><span>Özel Direksiyon Dersi</span><span>Simülatör</span>
+    <span>TODO: Araç Modeli 1</span><span>TODO: Araç Modeli 2</span><span>TODO: Araç Modeli 3</span><span>TODO: Araç Modeli 4</span><span>TODO: Araç Modeli 5</span><span>TODO: Araç Modeli 6</span>
+    <span>TODO: Araç Modeli 1</span><span>TODO: Araç Modeli 2</span><span>TODO: Araç Modeli 3</span><span>TODO: Araç Modeli 4</span><span>TODO: Araç Modeli 5</span><span>TODO: Araç Modeli 6</span>
   </div>
 </div>
 
@@ -130,50 +136,92 @@
 <section class="sec" id="siniflar">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">01 — Ehliyet Sınıfları</span>
-      <h2>Hangi ehliyeti istersen, yolu burada başlıyor.</h2>
-      <p>Motosikletten ağır vasıtaya kadar dokuz farklı sınıf. Manuel ve otomatik seçenekler ayrı ayrı sunulur.</p>
+      <span class="eyebrow">Ehliyet Sınıfları</span>
+      <h2>Hangi ehliyeti istersen, yolu burada başlıyor</h2>
+      <p>Motosikletten ağır vasıtaya kadar dokuz farklı sınıf. Manuel ve otomatik seçenekler ayrı ayrı sunulur. 30 araçlık filo sayesinde ders için sıra beklenmez, uygun gün ve saat kolayca ayarlanır.</p>
     </div>
     <div class="classes-grid">
 
       <div class="csign reveal" data-veh="moto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="34" r="7"/><circle cx="37" cy="34" r="7"/><path d="M11 34l8-14h10l6 14M19 20l-3-6h-5M29 20l6 4"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/motor-3.jpg"
+             srcset="./assets/img/motor-3.jpg 480w,
+                     ./assets/img/motor-3@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="A1 sınıfı 125 cc hafif eğitim motosikleti"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">A1</div><p class="cdesc">16 yaşından itibaren, 125 cc'ye kadar hafif motosikletler için ilk adım.</p></div>
       </div>
 
       <div class="csign reveal" data-veh="moto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="34" r="7"/><circle cx="37" cy="34" r="7"/><path d="M11 34l8-14h10l6 14M19 20l-3-6h-5M29 20l6 4"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/motor-5.jpg"
+             srcset="./assets/img/motor-5.jpg 480w,
+                     ./assets/img/motor-5@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="A1 Otomatik sınıfı scooter tipi eğitim motosikleti"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">A1<span class="cauto">Otomatik</span></div><p class="cdesc">A1 sınıfının otomatik vitesli (scooter tipi) seçeneği. Debriyaj derdi yok.</p></div>
       </div>
 
       <div class="csign reveal" data-veh="moto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="34" r="7"/><circle cx="37" cy="34" r="7"/><path d="M11 34l8-14h10l6 14M19 20l-3-6h-5M29 20l6 4"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/motor-1.jpg"
+             srcset="./assets/img/motor-1.jpg 480w,
+                     ./assets/img/motor-1@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="A2 sınıfı orta güç eğitim motosikleti"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">A2</div><p class="cdesc">18 yaşından itibaren orta sınıf motosikletler. Daha güçlü motorlara geçiş.</p></div>
       </div>
 
       <div class="csign reveal" data-veh="moto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="34" r="7"/><circle cx="37" cy="34" r="7"/><path d="M11 34l8-14h10l6 14M19 20l-3-6h-5M29 20l6 4"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/motor-6.jpg"
+             srcset="./assets/img/motor-6.jpg 480w,
+                     ./assets/img/motor-6@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="A2 Otomatik sınıfı eğitim motosikleti"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">A2<span class="cauto">Otomatik</span></div><p class="cdesc">A2 sınıfının otomatik vitesli versiyonu. Kolay ve pratik.</p></div>
       </div>
 
       <div class="csign reveal" data-veh="moto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="34" r="7"/><circle cx="37" cy="34" r="7"/><path d="M11 34l8-14h10l6 14M19 20l-3-6h-5M29 20l6 4"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/motor-2.jpg"
+             srcset="./assets/img/motor-2.jpg 480w,
+                     ./assets/img/motor-2@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="A sınıfı sınırsız güçte eğitim motosikleti"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">A</div><p class="cdesc">Sınırsız motosiklet ehliyeti. Güç sınırı olmadan tüm motosikletler.</p></div>
       </div>
 
       <div class="csign reveal" data-veh="oto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 30l3-9a4 4 0 013.7-2.6h22.6A4 4 0 0139 21l3 9M6 30h36v6a2 2 0 01-2 2h-3a2 2 0 01-2-2v-2H13v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-6z"/><circle cx="14" cy="30" r="2.5"/><circle cx="34" cy="30" r="2.5"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/otomobil-1.jpg"
+             srcset="./assets/img/otomobil-1.jpg 480w,
+                     ./assets/img/otomobil-1@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="B sınıfı manuel vites eğitim otomobili"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">B</div><p class="cdesc">En çok tercih edilen otomobil ehliyeti. Manuel vites — her araca binebilirsin.</p></div>
       </div>
 
       <div class="csign reveal" data-veh="oto">
-        <div class="cphoto"><svg class="cwm" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 30l3-9a4 4 0 013.7-2.6h22.6A4 4 0 0139 21l3 9M6 30h36v6a2 2 0 01-2 2h-3a2 2 0 01-2-2v-2H13v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-6z"/><circle cx="14" cy="30" r="2.5"/><circle cx="34" cy="30" r="2.5"/></svg></div>
+        <div class="cphoto"><img src="./assets/img/otomobil-1.jpg"
+             srcset="./assets/img/otomobil-1.jpg 480w,
+                     ./assets/img/otomobil-1@2x.jpg 960w"
+             sizes="(max-width: 900px) 100vw, 400px"
+             width="480" height="360"
+             loading="lazy" decoding="async"
+             alt="B Otomatik vites eğitim otomobili"></div>
         <div class="cscrim"></div>
         <div class="cbody"><div class="ccode">B<span class="cauto">Otomatik</span></div><p class="cdesc">Otomatik vitesli otomobil ehliyeti. Vitesle uğraşma, sürüşe odaklan.</p></div>
       </div>
@@ -191,90 +239,61 @@
       </div>
 
     </div>
-  </div>
-</section>
 
-<!-- ===== QUIZ BÖLÜMÜ | stil: css/13-quiz.css | script: js/quiz.js ===== -->
-<section class="sec quiz" id="test">
-  <div class="wrap">
-    <div class="sec-head reveal" style="max-width:760px">
-      <span class="eyebrow">02 — Sana Özel</span>
-      <h2>Hangi ehliyet sana uygun?</h2>
-      <p>Üç soru sor, doğru sınıfı söyleyelim. 30 saniye sürer.</p>
-    </div>
+    <details class="quiz-toggle" id="test">
+      <summary>Hangisi sana uygun bilmiyor musun? 3 soruda söyleyelim →</summary>
+      <div class="quiz-toggle-body">
+        <div class="quiz-box reveal">
+          <div class="quiz-progress"><span id="qbar"></span></div>
 
-    <div class="quiz-box reveal">
-      <div class="quiz-progress"><span id="qbar"></span></div>
+          <div class="qstep active" data-step="1">
+            <div class="qnum">Soru 1 / 3</div>
+            <h3>Yaşın kaç?</h3>
+            <div class="qopts">
+              <button class="qopt" data-key="age" data-val="16">16 – 17</button>
+              <button class="qopt" data-key="age" data-val="18">18 – 20</button>
+              <button class="qopt" data-key="age" data-val="21">21 – 23</button>
+              <button class="qopt" data-key="age" data-val="24">24 ve üzeri</button>
+            </div>
+          </div>
 
-      <div class="qstep active" data-step="1">
-        <div class="qnum">Soru 1 / 3</div>
-        <h3>Yaşın kaç?</h3>
-        <div class="qopts">
-          <button class="qopt" data-key="age" data-val="16">16 – 17</button>
-          <button class="qopt" data-key="age" data-val="18">18 – 20</button>
-          <button class="qopt" data-key="age" data-val="21">21 – 23</button>
-          <button class="qopt" data-key="age" data-val="24">24 ve üzeri</button>
+          <div class="qstep" data-step="2">
+            <div class="qnum">Soru 2 / 3</div>
+            <h3>Ne kullanmak istiyorsun?</h3>
+            <div class="qopts">
+              <button class="qopt" data-key="veh" data-val="moto">Motosiklet</button>
+              <button class="qopt" data-key="veh" data-val="oto">Otomobil</button>
+              <button class="qopt" data-key="veh" data-val="agir">Kamyon / Tır</button>
+            </div>
+          </div>
+
+          <div class="qstep" data-step="3">
+            <div class="qnum">Soru 3 / 3</div>
+            <h3>Vites tercihin?</h3>
+            <div class="qopts">
+              <button class="qopt" data-key="gear" data-val="manuel">Manuel</button>
+              <button class="qopt" data-key="gear" data-val="oto">Otomatik</button>
+              <button class="qopt" data-key="gear" data-val="fark">Fark etmez</button>
+            </div>
+          </div>
+
+          <div class="qresult" id="qresult">
+            <div class="qnum">Sonuç</div>
+            <div class="qbadge" id="qbadge">B</div>
+            <h3 id="qtitle">Senin sınıfın</h3>
+            <p id="qdesc"></p>
+            <div class="qnote" id="qnote"></div>
+            <div class="qactions">
+              <a class="btn" href="#iletisim">Kayıt İçin Ara
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <button class="btn ghost" id="qreset">Baştan Başla</button>
+            </div>
+          </div>
         </div>
+        <p class="quiz-legal">Bu araç bilgilendirme amaçlıdır. Kesin başvuru şartları için bizi arayabilir ya da kursumuza uğrayabilirsiniz.</p>
       </div>
-
-      <div class="qstep" data-step="2">
-        <div class="qnum">Soru 2 / 3</div>
-        <h3>Ne kullanmak istiyorsun?</h3>
-        <div class="qopts">
-          <button class="qopt" data-key="veh" data-val="moto">Motosiklet</button>
-          <button class="qopt" data-key="veh" data-val="oto">Otomobil</button>
-          <button class="qopt" data-key="veh" data-val="agir">Kamyon / Tır</button>
-        </div>
-      </div>
-
-      <div class="qstep" data-step="3">
-        <div class="qnum">Soru 3 / 3</div>
-        <h3>Vites tercihin?</h3>
-        <div class="qopts">
-          <button class="qopt" data-key="gear" data-val="manuel">Manuel</button>
-          <button class="qopt" data-key="gear" data-val="oto">Otomatik</button>
-          <button class="qopt" data-key="gear" data-val="fark">Fark etmez</button>
-        </div>
-      </div>
-
-      <div class="qresult" id="qresult">
-        <div class="qnum">Sonuç</div>
-        <div class="qbadge" id="qbadge">B</div>
-        <h3 id="qtitle">Senin sınıfın</h3>
-        <p id="qdesc"></p>
-        <div class="qnote" id="qnote"></div>
-        <div class="qactions">
-          <a class="btn" href="#iletisim">Kayıt İçin Ara
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <button class="btn ghost" id="qreset">Baştan Başla</button>
-        </div>
-      </div>
-    </div>
-    <p class="quiz-legal">Bu araç bilgilendirme amaçlıdır. Kesin başvuru şartları için bizi arayabilir ya da kursumuza uğrayabilirsiniz.</p>
-  </div>
-</section>
-<!-- ===== İSTATİSTİKLER BÖLÜMÜ | stil: css/14-istatistikler.css | script: js/istatistikler.js ===== -->
-<section class="stats sec on-dark" style="padding-top:0">
-  <div class="stats-tex" aria-hidden="true">
-    <span class="lane l1"></span>
-    <span class="lane l2"></span>
-    <span class="lane l3"></span>
-    <span class="lane l4"></span>
-  </div>
-  <div class="wrap">
-    <div class="sec-head reveal" style="padding-top:clamp(64px,9vw,120px)">
-      <span class="eyebrow">03 — Neden Biz</span>
-      <h2>Sayılar konuşuyor.</h2>
-    </div>
-  </div>
-  <div class="wrap">
-    <div class="stats-grid">
-      <div class="stat reveal"><div class="snum" data-count="30">0</div><div class="slabel">Araçlık filo — iki şube toplamı, bölgenin en genişi</div></div>
-      <div class="stat reveal"><div class="snum" data-count="4000">0<small>+</small></div><div class="slabel">Yola çıkardığımız mezun aday</div></div>
-      <div class="stat reveal"><div class="snum" data-count="2021">0</div><div class="slabel">Bu yıldan beri Korkuteli'ndeyiz</div></div>
-      <div class="stat reveal"><div class="snum" data-count="2">0</div><div class="slabel">Antalya'da şube — ve büyüyoruz</div></div>
-    </div>
+    </details>
   </div>
 </section>
 
@@ -283,7 +302,7 @@
   <div class="wrap">
     <div class="priv-grid">
       <div class="priv-copy reveal">
-        <span class="eyebrow">04 — Özel Direksiyon Dersi</span>
+        <span class="eyebrow">Özel Direksiyon Dersi</span>
         <h2>Ehliyetin var ama <br>direksiyona korkuyor musun?</h2>
         <p>Yalnız değilsin. Ehliyetini yıllar önce almış, hiç kullanmamış ya da Antalya trafiğine alışmak isteyen yüzlerce kişiye özel ders veriyoruz. Kendi tempona göre, sıfır baskıyla.</p>
         <div class="priv-who">
@@ -314,8 +333,8 @@
 <section class="sec" id="subeler">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">05 — Şubelerimiz</span>
-      <h2>Antalya'da iki noktada yanındayız.</h2>
+      <span class="eyebrow">Şubelerimiz</span>
+      <h2>Korkuteli ve Konyaaltı — Antalya'da iki şube, aynı kadro anlayışı</h2>
       <p>Korkuteli ana şubemiz ağır vasıta dahil tüm sınıfları sunar. Konyaaltı şubemiz yeni açıldı, hızla büyüyor.</p>
     </div>
     <div class="branch-grid">
@@ -377,37 +396,34 @@
   </div>
 </section>
 
-<!-- ===== SÜREÇ BÖLÜMÜ | stil: css/17-surec.css | script: yok ===== -->
+<!-- ===== SÜREÇ + BELGELER BÖLÜMÜ | stil: css/17-surec.css | script: yok ===== -->
 <section class="sec process on-dark" id="surec">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">06 — Nasıl Kayıt Olurum</span>
-      <h2>Dört adımda direksiyon başında.</h2>
+      <span class="eyebrow">Nasıl Kayıt Olurum</span>
+      <h2>Dört adımda direksiyon başındasın</h2>
     </div>
     <div class="steps">
       <div class="step reveal"><div class="sno">1</div><div><h3>Bize Ulaş</h3><p>Telefon ya da WhatsApp'tan yaz, hangi sınıfı istediğini söyle. Sana en yakın şubeyi ve uygun dönemi birlikte belirleyelim.</p></div></div>
-      <div class="step reveal"><div class="sno">2</div><div><h3>Kaydını Tamamla</h3><p>Gerekli belgeleri (kimlik, sağlık raporu, fotoğraf) hazırlıyoruz. Süreci senin adına takip ediyoruz.</p></div></div>
+      <div class="step reveal"><div class="sno">2</div><div>
+        <h3>Kaydını Tamamla</h3>
+        <p>Gerekli belgeleri (kimlik, sağlık raporu, fotoğraf) hazırlıyoruz. Süreci senin adına takip ediyoruz.</p>
+        <details class="fq">
+          <summary>Gerekli belgeler (6)</summary>
+          <div class="fqin">
+            <div class="doc-grid">
+              <div class="doc"><span class="dno">01</span><div><h3>Kimlik Fotokopisi</h3><p>Nüfus cüzdanı ya da yeni tip kimlik kartının fotokopisi.</p></div></div>
+              <div class="doc"><span class="dno">02</span><div><h3>Öğrenim Belgesi</h3><p>Diploma ya da mezuniyet belgesi fotokopisi. En az ilkokul mezuniyeti gerekiyor.</p></div></div>
+              <div class="doc"><span class="dno">03</span><div><h3>Biyometrik Fotoğraf</h3><p>2 adet. Yakın tarihli ve arka fonu düz olmalı.</p></div></div>
+              <div class="doc"><span class="dno">04</span><div><h3>Sağlık Raporu</h3><p>Aile hekiminden ya da anlaşmalı sağlık kuruluşundan alınabilir.</p></div></div>
+              <div class="doc"><span class="dno">05</span><div><h3>Adli Sicil Kaydı</h3><p>e-Devlet üzerinden dakikalar içinde alabilirsin.</p></div></div>
+              <div class="doc"><span class="dno">06</span><div><h3>Mevcut Ehliyet</h3><p>Sınıf yükseltiyorsan (örn. B'den C'ye) mevcut ehliyetinin fotokopisi.</p></div></div>
+            </div>
+          </div>
+        </details>
+      </div></div>
       <div class="step reveal"><div class="sno">3</div><div><h3>Teorik + Direksiyon Eğitimi</h3><p>Ferah sınıflarımızda teorik dersler, ardından geniş araç filomuzla gerçek yol pratiği.</p></div></div>
       <div class="step reveal"><div class="sno">4</div><div><h3>Sınav & Ehliyet</h3><p>Sınavlara hazır girersin. Yüksek geçme oranımızla ehliyetini alıp yola çıkarsın.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== BELGELER BÖLÜMÜ | stil: css/18-belgeler.css | script: yok ===== -->
-<section class="sec docs" id="belgeler">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="eyebrow">07 — Kayıt Belgeleri</span>
-      <h2>Yanında ne getirmelisin?</h2>
-      <p>Kayıt için gereken belgeler. Eksiğin olursa dert etme, süreçte biz yardımcı oluyoruz.</p>
-    </div>
-    <div class="doc-grid">
-      <div class="doc reveal"><span class="dno">01</span><div><h3>Kimlik Fotokopisi</h3><p>Nüfus cüzdanı ya da yeni tip kimlik kartının fotokopisi.</p></div></div>
-      <div class="doc reveal"><span class="dno">02</span><div><h3>Öğrenim Belgesi</h3><p>Diploma ya da mezuniyet belgesi fotokopisi. En az ilkokul mezuniyeti gerekiyor.</p></div></div>
-      <div class="doc reveal"><span class="dno">03</span><div><h3>Biyometrik Fotoğraf</h3><p>2 adet. Yakın tarihli ve arka fonu düz olmalı.</p></div></div>
-      <div class="doc reveal"><span class="dno">04</span><div><h3>Sağlık Raporu</h3><p>Aile hekiminden ya da anlaşmalı sağlık kuruluşundan alınabilir.</p></div></div>
-      <div class="doc reveal"><span class="dno">05</span><div><h3>Adli Sicil Kaydı</h3><p>e-Devlet üzerinden dakikalar içinde alabilirsin.</p></div></div>
-      <div class="doc reveal"><span class="dno">06</span><div><h3>Mevcut Ehliyet</h3><p>Sınıf yükseltiyorsan (örn. B'den C'ye) mevcut ehliyetinin fotokopisi.</p></div></div>
     </div>
   </div>
 </section>
@@ -416,7 +432,7 @@
 <section class="sec reviews" id="yorumlar">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">08 — Öğrencilerimiz</span>
+      <span class="eyebrow">Öğrencilerimiz</span>
       <h2>Bizden ehliyet alanlar ne diyor?</h2>
     </div>
     <div class="rev-grid">
@@ -456,7 +472,7 @@
 <section class="sec faq on-dark" id="sss">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="eyebrow">09 — Sık Sorulanlar</span>
+      <span class="eyebrow">Sık Sorulanlar</span>
       <h2>Merak ettiklerin</h2>
     </div>
     <div class="faq-list reveal">
@@ -579,6 +595,5 @@
 <script defer src="./js/utils.js"></script>
 <script defer src="./js/gauge.js"></script>
 <script defer src="./js/quiz.js"></script>
-<script defer src="./js/istatistikler.js"></script>
 </body>
 </html>
